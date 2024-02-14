@@ -11,9 +11,9 @@ class Base(DeclarativeBase):
     pass
 
 class Pessoa(Base):
-    __tablename__ = "user_account"
+    __tablename__ = "user_account"  #ORM syntax standard
     id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(String(30))
+    name: Mapped[str] = mapped_column(String(60)) 
     fullname: Mapped[Optional[str]]
     password: Mapped[str]
     def __repr__(self) -> str:
